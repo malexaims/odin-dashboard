@@ -8,6 +8,11 @@ body, html{
     height: 100%;
 }
 
+h1{
+    justify-self: left;
+    align-self: center;
+}
+
 .grid-container{
     display: grid;
     grid-template-columns: 1fr 4fr;
@@ -21,17 +26,16 @@ body, html{
     display: grid;
     grid-template-columns: 3fr 1fr;
     grid-template-rows: 1fr 2fr;
-}
-
-.search-input{
-    grid-column: 1;
-    grid-row: 1;
+    margin-bottom: 1rem;
+    padding: 2rem;
+    box-shadow: 0 4px 10pc rgba(0,0,0,0.2);
 }
 
 .upper-right{
     display: flex;
     grid-column: 2;
     grid-row: 1;
+    justify-self: center;
 }
 
 .navigation{
@@ -43,22 +47,67 @@ body, html{
     align-self: center;
     justify-self: center;
     width: 100%;
-    height: 100%;
+    height: 40%;
+    flex-direction: column;
+}
+
+.account-navigation{
+    list-style: none;
+    display: flex;
+    grid-column: 2;
+    grid-row: 2;
+    justify-content: space-evenly;
+    align-self: center;
+    justify-self: center;
+    width: 100%;
+    height: 20%;
+    flex-direction: column;
+}
+
+.main-titles{
+    color: black;
+}
+
+.bell-icon{
+    margin: 1em;
+}
+
+nav{
+    align-self: center;
+    justify-self: center;
+}
+
+.file-options{
+    display: flex;
+    list-style: none;
+    gap: 2em;
 }
     
 
 .sidebar{
     grid-column: 1;
     grid-row: 1 / -1;
+    background-color: cadetblue;
+}
+
+.sidebar a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.sidebar a i {
+    margin-right: 1em;
 }
 
 .main-content {
-
+    margin-left: 2em;
 }
 
 .grid-items {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
     gap: 1rem; 
 }
 
@@ -68,6 +117,7 @@ body, html{
     border-radius: 5px; 
     padding: 1rem; 
     position: relative; 
+    border-left: 6px solid yellowgreen;
 }
 
 .icons {
@@ -76,3 +126,38 @@ body, html{
     right: 1rem; 
 }
 
+.dashboard{
+    margin-left: 1em;
+    color: white;
+}
+
+.dashboard i{
+    margin-right: 1em;
+}
+
+.search-container{
+    grid-column: 1;
+    grid-row: 1;
+    display: flex;
+    align-items: center;
+}
+
+.search-input{
+    border-radius: 1em;
+    margin: 1em;
+    background-color: lightgray;
+    width: 100%;
+}
+
+.button {
+    background-color: cadetblue; 
+    color: white;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border: none; 
+    border-radius: 4px; 
+    text-decoration: none; 
+    display: inline-flex; 
+    align-items: center; 
+    margin-right: 0.5rem; 
+}
